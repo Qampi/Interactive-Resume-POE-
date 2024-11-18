@@ -1,151 +1,133 @@
-/* Home.css */
-
-.Home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-    background-color: #f0f0f0;
-}
-    
-    .h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-    }
-    
-    .p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 40px;
-    color: #0a0a0a;
-    }
-    /*button
-    .button a{
-        color: #030303; 
-        text-decoration: none;
-        transition: color 0.2s ease;
-    }
-    .button a:hover {
-        color: #ccc;
-    }
-    .button a.active {
-        color: #85d4e7; 
-        border-bottom: 2px solid #cc1818;
-    }*/
-    .main{
-        grid-area: main;
-        background-color:#ffff;
-        color: rgb(12, 12, 12);
-        display: flex;
-        justify-content: space-between;
-        height: 100%;
-    }
-    .footer{
-        grid-area: footer
-    }
-    /*html{
-        font-size:62.5%; 
-        box-sizing: border-box
-    }*/
-    body{
-        font: 1.6rem;
-        height: 100%;
-        margin: 0;
-        display:contents
-    }
-    .grid-container{
-        display: grid;
-        grid-template-areas:
-        "header"
-        "main"
-        "footer";
-        grid-template-columns: 1fr;
-        grid-template-rows:5rem 1fr 5rem;
-        height: 100%;
-    }
-    .footer{
-        grid-area:auto;
-        grid-area: header;
-        background-color:#eee6e6e6;
-        color:black;
-        display:flex;
-        justify-content:space-between;
-    }
-    /* Responsive design */
-    
-    @media (max-width: 768px) {
-    .Home {
-    padding: 30px;
-    }
-    .h1 {
-    font-size: 28px;
-    }
-    .p {
-    font-size: 16px;
-    }
-    }
-    
-    @media (max-width: 480px) {
-    .Home {
-    padding: 20px;
-    }
-    .h1 {
-    font-size: 24px;
-    }
-    .p {
-    font-size: 14px;
-    }
-    }
-
-/* Navbar.css */ 
 .navbar {
-    background-color: #333;
-    background-color: #eee6e6;
-    padding: 1em;
+    position: sticky;
+    top: 0;
+    background-color: #e2cece;
     padding: 1em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     align-items: center;
 }
-.navbar a{
-    color: #030303; text-decoration: none;
+.Navbar a{
+    color:rgba(0, 0, 0, 0.5);
+    text-decoration: none;
     transition: color 0.2s ease;
 }
-.navbar a:hover {
-    color: #ccc; 
+.Navbar a:hover{
+    color: #ccc;
 }
-.navbar a.active {
-    color: #fff; border-bottom: 2px solid #fff;
+.Navbar a.active{
+    color: #fff;
+    border-bottom: 2px solid #fff;
 }
-.navbar ul {
-    list-style: none;
+.Navbar ul{
+    li-style: none;
     margin: 0;
-    padding: 0;
     display: flex;
     justify-content: space-between;
 }
-.navbar li {
-    margin-right: 20px; 
+.Navbar li{
+    margin-right: 20px;
+}
+.progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    height: 20px;
+    margin-top: 5px;
+}
+.progress-bar {
+    background-color: #4caf50; /* Green for progress */
+    height: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.project-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.project-card:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.project-card:hover .overlay {
+    opacity: 1;
+}
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.timeline-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.timeline-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.timeline-item p {
+    margin: 5px 0;
+    color: #555;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+#social-media a {
+    margin: 10px;
+    display: inline-block;
+}
+#social-media img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+#social-media img:hover {
+    transform: scale(1.1);
 }
 
-    /*About.css*/
-    .image {
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        height:fit-content;
-    }
-   /*contact.css*/
-
-   /*Project.css*/
-/*.container{
-
-}
-.project ul{
-
-}
-.project li{
-
-}

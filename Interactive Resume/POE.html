@@ -1,71 +1,105 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <head>
-            <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>ASIPHE QAMPI - PORTFOLIO</title>
-            <link rel="stylesheet" href="/style.css">
-        </head>
-    </head> 
-    <body class="body"> 
-        <div class="grid-container">
-            <header class="header"> 
-                <nav class="navbar"> 
-                        <ul class="navbar ul"><li class="navbar li"><a href="#home">Home</a></li></ul>
-                        <ul class="navbar ul"><li class="navbar li"><a href="#about">About</a></li></ul> 
-                        <ul class="navbar ul"><li class="navbar li"><a href="#projects">Projects</a></li></ul> 
-                        <ul class="navbar ul"><li class="navbar li"><a href="#experience">Experience</a></li></ul> 
-                        <ul class="navbar ul"><li class="navbar li"><a href="#contact">Contact</a></li></ul>  
-                </nav> 
-            </header> 
-            <main class="main"> 
-                <section id="home"> 
-                    <h1 class="h1">Welcome to my Portfolio!</h1> 
-                    <p class="p">I'm Asiphe Qampi.</p> 
-                    <!--<button class="button"><a href="#about">About Me</a></button>-->
-                </section> 
-                <section id="about"> 
-                    <h1 class="h1">About Me</h1> 
-                    <div class="image">
-                        <img src="images/IMG_5852.jpeg" alt="About Image" width="450" height="450" class="about-image"> </div> 
-                        <p class="p">Born on July 24, 2000, I graduated from the University of the Western Cape.</p> 
-                        <p class="p">I am a dedicated and detail-oriented individual who consistently produces high-quality work. As an introvert, I thrive in focused environments and am highly self-motivated, allowing me to excel independently and complete tasks with precision. While I prefer working autonomously, I am also capable of collaborating effectively, building respectful relationships, and taking instructions from all levels to contribute to team success.</p> 
-                    </section> 
-                    <section id="projects"> 
-                        <h1 class="h1">My Projects:</h1> 
-                        <div class="container">
-                            <ul class="project ul"> 
-                                <li class="project li">Greenpop South Africa</li> 
-                                <li class="project li">Ubuntu Peace Programme</li> 
-                                <li class="project li">Grassroot Soccer</li> 
-                                <li class="project li">Absa Software Development Programme</li> 
-                                <li class="project li">Hope Africa</li> 
-                                <li class="project li">Bridges of Hope</li> 
-                                <li class="project li">Desmond Tutu Org</li> 
-                            </ul> 
-                        </div> 
-                    </section> 
-                    <section id="experience"> 
-                        <h1 class="h1">Work Experience</h1> 
-                        <div class="container">
-                            <ul class="project ul"> 
-                                <li class="project li">Western Cape Department of Education</li> 
-                                <li class="project li">Examination Assistance For Data Capturing</li> 
-                                <li class="project li">Duration:09/12/2023- 22/12/2023</li> 
-                            </ul> 
-                        </div> 
-                    </section> 
-                    <section id="contact"> 
-                        <h1 class="h1">Contact Me</h1> 
-                        <p>Contact information will go here.</p> 
-                    </section> 
-                </main> 
-                <footer class="footer"> 
-                    <p>&copy; 2024 Asiphe Qampi</p> 
-                </footer> 
-                <script src="script/script.js">
-                </script> 
-                </div> 
-            </body> 
-            </html> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASIPHE QAMPI - PORTFOLIO</title>
+    <link rel="stylesheet" href="/styles/style.css"> <!-- Correct path to your CSS -->
+</head>
+
+<body class="body">
+    <header class="header">
+        <nav class="navbar">
+            <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\images\IMG_5855.JPG" alt="Asiphe" width="250" height="250">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        </nav>
+    </header>
+    <main class="main">
+        <section id="home" data-aos="fade-up">
+            <h1>Welcome to my Portfolio!</h1>
+            <p>I'm Asiphe Qampi.</p>
+        </section>
+
+        <section id="about">
+            <head>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+            </head>
+            <body>
+                <section id="about" data-aos="fade-up">
+                    <h2>About Me</h2>
+                    <p>This is where I talk about my background.</p>
+                </section>
+            
+                <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                    AOS.init();
+                </script>
+            </body>
+        </section>
+
+        <section id="projects" data-aos="fade-up">
+            <h1>My Projects:</h1>
+            <section id="projects">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <div class="overlay">
+                        <h3>Project Name</h3>
+                        <p>Short description of the project.</p>
+                    </div>
+                </div>
+            </section>
+            
+        </section>
+
+        <section id="experience" data-aos="fade-up">
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Software Developer</h3>
+                        <p>Company XYZ | Jan 2023 - Present</p>
+                        <p>Developing web applications using React.js and Node.js.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Intern</h3>
+                        <p>Company ABC | Jun 2022 - Dec 2022</p>
+                        <p>Worked on backend API development using Java and Spring Boot.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="contact" data-aos="fade-up">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <section id="social-media">
+                <a href="https://linkedin.com/in/AsipheQampi" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                <a href="https://github.com/Qampi" target="_blank"><img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\images\R.png" alt="GitHub" height="50" width="50"></a>
+            </section>
+            
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Asiphe Qampi</p>
+
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
