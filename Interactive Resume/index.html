@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASIPHE QAMPI - PORTFOLIO</title>
+    <link rel="stylesheet" href="/styles/style.css"> <!-- Correct path to your CSS -->
+</head>
+<style>/* Reset some basic styles for cross-browser consistency */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    header .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    header .navbar img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    
+    header .navbar ul {
+        display: flex;
+        gap: 20px;
+        margin-left: 20px;
+    }
+    
+    header .navbar li {
+        display: inline;
+    }
+    
+    header .navbar a {
+        color: #fff;
+        font-size: 18px;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+    }
+    
+    header .navbar a:hover {
+        background-color: #575757;
+        border-radius: 4px;
+    }
+    
+    main {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    section {
+        margin-bottom: 40px;
+    }
+    
+    section h1, section h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    section p {
+        color: #666;
+        font-size: 1.1em;
+    }
+    
+    #home {
+        text-align: center;
+        background-color: #e3f2fd;
+        padding: 50px 20px;
+    }
+    
+    #home h1 {
+        font-size: 2.5em;
+        color: #1e88e5;
+    }
+    
+    #home p {
+        font-size: 1.3em;
+        color: #555;
+    }
+    
+    .project-card {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    
+    .project-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+    }
+    
+    .project-card .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 8px;
+    }
+    
+    .project-card:hover .overlay {
+        display: flex;
+    }
+    
+    .timeline {
+        margin-top: 20px;
+    }
+    
+    .timeline-item {
+        background-color: #fff;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .timeline-item h3 {
+        color: #1e88e5;
+    }
+    
+    .timeline-item p {
+        color: #777;
+    }
+    
+    form {
+        display: grid;
+        gap: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    form input, form textarea {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1em;
+    }
+    
+    form button {
+        padding: 12px;
+        background-color: #1e88e5;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s ease;
+    }
+    
+    form button:hover {
+        background-color: #1565c0;
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    footer a {
+        margin: 0 10px;
+        color: #fff;
+        transition: transform 0.3s ease;
+    }
+    
+    footer a:hover {
+        transform: scale(1.1);
+    }
+    
+    footer img {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+    
+     </style>
+<body class="body">
+    <header class="header">
+        <nav class="navbar">
+            <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\images\IMG_5855.JPG" alt="Asiphe" width="250" height="250">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        </nav>
+    </header>
+    <main class="main">
+        <section id="home" data-aos="fade-up">
+            <h1>Welcome to my Portfolio!</h1>
+            <p>I'm Asiphe Qampi.</p>
+        </section>
+
+        <section id="about">
+            <head>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+            </head>
+            <body>
+                <section id="about" data-aos="fade-up">
+                    <h2>About Me</h2>
+                    <!--<p>This is where I talk about my background.</p>-->
+                </section>
+            
+                <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+                <script>
+                    AOS.init();
+                </script>
+            </body>
+        </section>
+
+        <section id="projects" data-aos="fade-up">
+            <h1>My Projects:</h1>
+            <section id="projects">
+                <div class="project-card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <div class="overlay">
+                        <h3>Project Name</h3>
+                        <p>Short description of the project.</p>
+                    </div>
+                </div>
+            </section>
+            
+        </section>
+
+        <section id="experience" data-aos="fade-up">
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Software Developer</h3>
+                        <p>Company XYZ | Jan 2023 - Present</p>
+                        <p>Developing web applications using React.js and Node.js.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Intern</h3>
+                        <p>Company ABC | Jun 2022 - Dec 2022</p>
+                        <p>Worked on backend API development using Java and Spring Boot.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="contact" data-aos="fade-up">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            
+            
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Asiphe Qampi</p>
+        <!--<section id="social-media">-->
+            <a href="https://linkedin.com/in/AsipheQampi" target="_blank"><img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\images\Linkedin-Logo.png" alt="LinkedIn" height="50" width="50"></a>
+            <a href="https://github.com/Qampi" target="_blank"><img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\images\R.png" alt="GitHub" height="50" width="50"></a>
+        <!--</section>-->
+    </footer>
+    
+    <script src="script/script.js"></script>
+</body>
+
+</html>
