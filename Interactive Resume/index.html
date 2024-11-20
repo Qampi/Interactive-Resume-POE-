@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASIPHE QAMPI - PORTFOLIO</title>
-    <link rel="stylesheet" href="/styles/style.css"> <!-- Correct path to your CSS -->
-</head>
+    </head>
 <style>
     * {
         margin: 0;
@@ -31,7 +30,7 @@
     }
     
     header {
-        background-color: #110e0e;
+        background-color: #0f0f0f;
         color: #fff;
         padding: 10px 0;
         text-align: center;
@@ -108,41 +107,45 @@
         font-size: 1.3em;
         color: #b4abab;
     }
-    
-    .project{
-        position: relative;
-        margin-bottom: 20px;
-    }
-    
-    .project img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 8px;
-    }
-    
-    .project .overlays {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        border-radius: 8px;
-    }
-    
-    .project:hover .overlays {
-        display: flex;
-    }
-    
-    .timeline {
-        margin-top: 20px;
-    }
+    .project {
+    position: relative;
+    margin-bottom: 20px;
+    width: 300px; /* Adjust width for the project container */
+    height: 300px; /* Adjust height for the project container */
+    margin: 0 auto; /* Center the project on the page */
+}
+
+.project img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    display: block;
+    border-radius: 8px;
+    object-fit: cover; /* Maintains aspect ratio while filling the container */
+}
+
+.project .overlays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project:hover .overlays {
+    display: flex;
+}
+
+.timeline {
+    margin-top: 20px;
+}
     #projects {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping for smaller screens */
@@ -225,7 +228,7 @@
     
     form button {
         padding: 12px;
-        background-color: #f3ccec;
+        background-color: #0c090b;
         color: white;
         border: none;
         border-radius: 4px;
@@ -239,7 +242,7 @@
     }
     
     footer {
-        background-color: #3d3b3b;
+        background-color: #030102;
         color: #fff;
         text-align: center;
         padding: 15px 0;
@@ -294,35 +297,77 @@
 .cv-button:hover .cv-icon {
     transform: scale(1.1); /* Slight zoom on hover */
 }
+:root {
+        --bg-color: #ffffff;
+        --text-color: #fffcfc;
+        --link-color: #0000ff;
+    }
+
+    .dark-theme {
+        --bg-color: #cfbfca;
+        --text-color: #000000;
+        --link-color: #ff66ad;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    a {
+        color: var(--link-color);
+    }
 </style>
 <body class="body">
     <header class="header">
         <nav class="navbar">
             <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\images\IMG_5855.JPG" alt="Asiphe" width="250" height="250">
             <ul>
+                <li><button id="theme-toggle">Toggle Theme</button></li>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <a class="cv-button" href="C:\Users\Asiphe.Qampi\Asiphe Qampi\CV\Professional Minimalist CV Resume (1).pdf " target="_blank">
-                    <!--<img src="/images/resume-icon-png-2.png" alt="PDF Icon" class="cv-icon" width="15" height="15">-->
+                <a class="cv-button" href="C:\Users\Asiphe.Qampi\Asiphe Qampi\CV\Asiphe Qampi_Resume .pdf" target="_blank">
+                    <!--<img src="/images/resume-icon-png-2.png" alt="PDF Icon" class="cv-icon">-->
                 view/ download my cv
                 </a>
-                
-                
             </ul>
-        </nav>
-        
+            <script>
+    // Get references to the toggle button and the document body
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check local storage for a saved theme
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+        body.classList.add(savedTheme); // Apply the saved theme
+    }
+
+    // Add an event listener to the toggle button
+    themeToggleButton.addEventListener('click', () => {
+        // Toggle between light and dark themes
+        if (body.classList.contains('dark-theme')) {
+            body.classList.remove('dark-theme');
+            localStorage.setItem('theme', ''); // Save preference to local storage
+        } else {
+            body.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark-theme'); // Save preference to local storage
+        }
+    });
+</script>
+
         </nav>
     </header>
     <main class="main">
         <section id="home" data-aos="fade-up">
-            <!--<p>I'm Asiphe Qampi.</p>-->
             <div class="project">
-                <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\images\IMG_5852.jpeg" alt="Project 1" height="80" width="80">
+                <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\images\IMG_5852.jpeg" alt="Project 1" class="project-img">
                 <div class="overlays">
-                    <h1>Welcome to my Portfolio!</h1>
+                    <h3>Welcome to my Portfolio!</h3>
                     <!--<p>Short description of the project.</p>-->
                 </div>
             </div>
@@ -336,8 +381,10 @@
                 <section id="about" data-aos="fade-up">
                     <h2>About Me</h2>
                     <!--<p>This is where I talk about my background.</p>-->
-                    <p class="p">Born on July 24, 2000, I graduated from the University of the Western Cape.</p>
-                    <p class="p">I am a dedicated and detail-oriented individual who consistently produces high-quality work. As an introvert, I thrive in focused environments and am highly self-motivated, allowing me to excel independently and complete tasks with precision. While I prefer working autonomously, I am also capable of collaborating effectively, building respectful relationships, and taking instructions from all levels to contribute to team success.</p>
+                    <p class="p">My name is Asiphe Qampi and I was born on July 24, 2000, I graduated from the University of the Western Cape.</p>
+                    <p class="p">I am a dedicated and detail-oriented individual who consistently produces high-quality work. </p>
+                    <p>As an introvert, I thrive in focused environments and am highly self-motivated, allowing me to excel independently and complete tasks with precision. <br>
+                         While I prefer working freely, I am also capable of collaborating effectively, building respectful relationships, and taking instructions from all levels to contribute to team success.</p>
                 </section>
             
                 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
@@ -350,20 +397,6 @@
         <section id="projects" data-aos="fade-up">
             <h1>My Projects:</h1>
             <section id="projects">
-                <!--<div class="project-card">
-                    <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\projects\full stack.png" alt="Project 1">
-                    <div class="overlay">
-                        <h3>Full Stack Development</h3>
-                        <p>Short description of the project.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\projects\js & node.png" alt="Project 2">
-                    <div class="overlay">
-                        <h3>Intro to JavaScript and Node.js</h3>
-                        <p>Short description of the project.</p>
-                    </div>
-                </div>-->
                 <section id="projects">
                     <div class="project-card">
                         <a href="C:\Users\Asiphe.Qampi\Asiphe Qampi\projects\full stack.png" target="_blank">
@@ -392,23 +425,21 @@
                 <h2>Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h3>SOFTWARE DEVELOPMENT INTERN</h3>
+                        <h3>Software Development Intern</h3>
                         <p>Company CAPACITI | 01 AUGUST 2024- present</p>
-                        <!--<p>Developing web applications using React.js and Node.js.</p>-->
                     </div>
                     <div class="timeline-item">
-                        <h3>Data Capture Assistance</h3>
+                        <h3>Examination Assistance for Data Capturing</h3>
                         <p>Company western Cape Department of Education | DEC 2023 - Dec 2023</p>
-                        <!--<p>.</p>-->
                     </div>
                     <div class="timeline-item">
                         <h3>Data Capture</h3>
                         <p>Company Stats SA | FEB 2022 - MAR 2023</p>
-                        <!--<p>Worked on backend API development using Java and Spring Boot.</p>-->
                     </div>
                 </div>
             </section>
         </section>
+        
         <section id="contact" data-aos="fade-up">
             <h2>Contact Me</h2>
             <form id="contactForm">
@@ -417,10 +448,31 @@
                 <textarea id="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
+            <script>
+                const contactForm = document.getElementById('contactForm');
+            
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault(); // Prevent the default form submission
+            
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('message').value.trim();
+            
+                    if (name && email && message) {
+                        // For now, log the data (replace this with actual email sending logic)
+                        console.log('Form submitted:', { name, email, message });
+            
+                        // Show a success message
+                        alert('Thank you for reaching out! I will get back to you soon.');
+                        contactForm.reset(); // Clear the form
+                    } else {
+                        alert('Please fill in all the fields.');
+                    }
+                });
+            </script>
             
             
         </section>
-        
     </main>
 
     <footer class="footer">
