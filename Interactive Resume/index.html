@@ -7,7 +7,7 @@
     <title>ASIPHE QAMPI - PORTFOLIO</title>
     <link rel="stylesheet" href="/styles/style.css"> <!-- Correct path to your CSS -->
 </head>
-<style>/* Reset some basic styles for cross-browser consistency */
+<style>
     * {
         margin: 0;
         padding: 0;
@@ -17,7 +17,7 @@
     body {
         font-family: 'Arial', sans-serif;
         line-height: 1.6;
-        background-color: #f4f4f4;
+        background-color: #6d595900;
         color: #333;
     }
     
@@ -106,22 +106,22 @@
     
     #home p {
         font-size: 1.3em;
-        color: #555;
+        color: #b4abab;
     }
     
-    .project-card {
+    .project{
         position: relative;
         margin-bottom: 20px;
     }
     
-    .project-card img {
+    .project img {
         width: 100%;
         height: auto;
         display: block;
         border-radius: 8px;
     }
     
-    .project-card .overlay {
+    .project .overlays {
         position: absolute;
         top: 0;
         left: 0;
@@ -136,13 +136,62 @@
         border-radius: 8px;
     }
     
-    .project-card:hover .overlay {
+    .project:hover .overlays {
         display: flex;
     }
     
     .timeline {
         margin-top: 20px;
     }
+    #projects {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    gap: 20px; /* Adds spacing between project cards */
+    justify-content: center; /* Centers the content */
+    padding: 20px;
+}
+
+.project-card {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 200px; /* Card width adjusted for medium images */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Hover lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 150px; /* Medium width */
+    height: 150px; /* Medium height */
+    object-fit: cover; /* Ensures proper scaling */
+    margin: 10px auto;
+    display: block;
+    cursor: pointer; /* Indicates that the image is clickable */
+}
+
+.overlay {
+    padding: 10px;
+    text-align: center;
+}
+
+.overlay h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.overlay p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
     
     .timeline-item {
         background-color: #fff;
@@ -211,8 +260,41 @@
         height: 40px;
         margin: 0 10px;
     }
+    .cv-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color:   #222021; /* Vibrant blue */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
     
-     </style>
+}
+
+.cv-button:hover {
+    background-color: #3a2a41; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight hover lift */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cv-icon {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.cv-button:hover .cv-icon {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+</style>
 <body class="body">
     <header class="header">
         <nav class="navbar">
@@ -223,6 +305,12 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <a class="cv-button" href="C:\Users\Asiphe.Qampi\Asiphe Qampi\CV\Professional Minimalist CV Resume (1).pdf " target="_blank">
+                    <!--<img src="/images/resume-icon-png-2.png" alt="PDF Icon" class="cv-icon" width="15" height="15">-->
+                view/ download my cv
+                </a>
+                
+                
             </ul>
         </nav>
         
@@ -230,8 +318,14 @@
     </header>
     <main class="main">
         <section id="home" data-aos="fade-up">
-            <h1>Welcome to my Portfolio!</h1>
-            <p>I'm Asiphe Qampi.</p>
+            <!--<p>I'm Asiphe Qampi.</p>-->
+            <div class="project">
+                <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\images\IMG_5852.jpeg" alt="Project 1" height="80" width="80">
+                <div class="overlays">
+                    <h1>Welcome to my Portfolio!</h1>
+                    <!--<p>Short description of the project.</p>-->
+                </div>
+            </div>
         </section>
 
         <section id="about">
@@ -244,7 +338,6 @@
                     <!--<p>This is where I talk about my background.</p>-->
                     <p class="p">Born on July 24, 2000, I graduated from the University of the Western Cape.</p>
                     <p class="p">I am a dedicated and detail-oriented individual who consistently produces high-quality work. As an introvert, I thrive in focused environments and am highly self-motivated, allowing me to excel independently and complete tasks with precision. While I prefer working autonomously, I am also capable of collaborating effectively, building respectful relationships, and taking instructions from all levels to contribute to team success.</p>
-                    
                 </section>
             
                 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
@@ -257,14 +350,40 @@
         <section id="projects" data-aos="fade-up">
             <h1>My Projects:</h1>
             <section id="projects">
-                <div class="project-card">
-                    <img src="project1.jpg" alt="Project 1">
+                <!--<div class="project-card">
+                    <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\projects\full stack.png" alt="Project 1">
                     <div class="overlay">
-                        <h3>Project Name</h3>
+                        <h3>Full Stack Development</h3>
                         <p>Short description of the project.</p>
                     </div>
                 </div>
-            </section>
+                <div class="project-card">
+                    <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\projects\js & node.png" alt="Project 2">
+                    <div class="overlay">
+                        <h3>Intro to JavaScript and Node.js</h3>
+                        <p>Short description of the project.</p>
+                    </div>
+                </div>-->
+                <section id="projects">
+                    <div class="project-card">
+                        <a href="C:\Users\Asiphe.Qampi\Asiphe Qampi\projects\full stack.png" target="_blank">
+                            <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\projects\full stack.png" alt="Project 1" class="project-image">
+                        </a>
+                        <div class="overlay">
+                            <h3>Full Stack Development</h3>
+                            <p>Short description of the project.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <a href="C:\Users\Asiphe.Qampi\Asiphe Qampi\projects\js & node.png" target="_blank">
+                            <img src="C:\Users\Asiphe.Qampi\Asiphe Qampi\projects\js & node.png" alt="Project 2" class="project-image">
+                        </a>
+                        <div class="overlay">
+                            <h3>Intro to JavaScript and Node.js</h3>
+                            <p>Short description of the project.</p>
+                        </div>
+                    </div>
+                </section>
             
         </section>
 
@@ -273,14 +392,19 @@
                 <h2>Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h3>Software Developer</h3>
-                        <p>Company XYZ | Jan 2023 - Present</p>
-                        <p>Developing web applications using React.js and Node.js.</p>
+                        <h3>SOFTWARE DEVELOPMENT INTERN</h3>
+                        <p>Company CAPACITI | 01 AUGUST 2024- present</p>
+                        <!--<p>Developing web applications using React.js and Node.js.</p>-->
                     </div>
                     <div class="timeline-item">
-                        <h3>Intern</h3>
-                        <p>Company ABC | Jun 2022 - Dec 2022</p>
-                        <p>Worked on backend API development using Java and Spring Boot.</p>
+                        <h3>Data Capture Assistance</h3>
+                        <p>Company western Cape Department of Education | DEC 2023 - Dec 2023</p>
+                        <!--<p>.</p>-->
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Data Capture</h3>
+                        <p>Company Stats SA | FEB 2022 - MAR 2023</p>
+                        <!--<p>Worked on backend API development using Java and Spring Boot.</p>-->
                     </div>
                 </div>
             </section>
