@@ -510,17 +510,17 @@
                     </div>
                     <div class="timeline-item">
                         <h3>Examination Assistance for Data Capturing</h3>
-                        <p>Company western Cape Department of Education | DEC 2023 - Dec 2023</p>
+                        <p>COMPANY:  western Cape Department of Education | DEC 2023 - Dec 2023</p>
                     </div>
                     <div class="timeline-item">
                         <h3>Data Capture</h3>
-                        <p>Company Stats SA | FEB 2022 - MAR 2023</p>
+                        <p>Company STATISTICS SA | FEB 2022 - MAR 2023</p>
                     </div>
                 </div>
             </section>
         </section>
         
-        <section id="contact" data-aos="fade-up">
+        <!--<section id="contact" data-aos="fade-up">
             <h2>Contact Me</h2>
             <form id="contactForm">
                 <input type="text" id="name" placeholder="Your Name" required>
@@ -552,13 +552,104 @@
             </script>
             
             
+        </section>-->
+        <!--<section id="contact" data-aos="fade-up">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script>
+                // Initialize EmailJS
+                (function () {
+                    emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS User ID
+                })();
+        
+                const contactForm = document.getElementById('contactForm');
+        
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault(); // Prevent the default form submission
+        
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('message').value.trim();
+        
+                    if (name && email && message) {
+                        const templateParams = {
+                            name: name,
+                            email: email,
+                            message: message
+                        };
+        
+                        // Use EmailJS to send the form data
+                        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                            .then((response) => {
+                                alert('Thank you for reaching out! I will get back to you soon.');
+                                contactForm.reset(); // Clear the form
+                            })
+                            .catch((error) => {
+                                console.error('Failed to send email:', error);
+                                alert('Oops! Something went wrong. Please try again later.');
+                            });
+                    } else {
+                        alert('Please fill in all the fields.');
+                    }
+                });
+            </script>
+        </section>-->
+        <section>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            <script>
+                const contactForm = document.getElementById('contactForm');
+            
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault(); // Prevent default form submission
+            
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const message = document.getElementById('message').value.trim();
+            
+                    if (name && email && message) {
+                        try {
+                            const response = await fetch('http://localhost:5000/send-email', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ name, email, message }),
+                            });
+            
+                            const result = await response.json();
+                            if (response.ok) {
+                                alert('Thank you for reaching out! I will get back to you soon.');
+                                contactForm.reset(); // Clear the form
+                            } else {
+                                alert(`Error: ${result.error}`);
+                            }
+                        } catch (error) {
+                            console.error('Error:', error);
+                            alert('Oops! Something went wrong. Please try again later.');
+                        }
+                    } else {
+                        alert('Please fill in all the fields.');
+                    }
+                });
+            </script>
         </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2024 Asiphe Qampi</p>
         <!--<section id="social-media">-->
-            <a href="https://linkedin.com/in/asiphe-qampi-309433235" target="_blank"><img src="images\Linkedin-Logo.png" alt="LinkedIn" height="50" width="50"></a>
+            <a href="http://linkedin.com/in/asiphe-qampi-309433235" target="_blank"><img src="images\Linkedin-Logo.png" alt="LinkedIn" height="50" width="50"></a>
             <a href="https://github.com/Qampi" target="_blank"><img src="images\R.png" alt="GitHub" height="50" width="50"></a>
         <!--</section>-->
     </footer>
@@ -567,4 +658,4 @@
 </body>
 
 </html>
-fitness stratup app
+fitness startup app
